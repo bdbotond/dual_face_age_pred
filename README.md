@@ -1,5 +1,5 @@
 # Age prediction from front and side images
- Our goal was to predict the age from different angels photos, and check if the predictions can be improved if we use two images at the same time
+ Our goal was to predict the age from different angels photos, and check if the predictions can be improved if we use two images at the same time. We achived
 
 
 # Dataset description
@@ -16,7 +16,7 @@ We split the data into training, validation, and testing sets by using 0.6, 0.2,
 
 
 
-|Model name|Model file||
+|Model name|Model file|
 |:--:|:--:|:--:|
 |Front|front.pt|
 
