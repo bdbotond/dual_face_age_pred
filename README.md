@@ -16,8 +16,15 @@ We split the data into training, validation, and testing sets by using 0.6, 0.2,
 
 
 
-Model name|Model file||
-Front|front.pt|
-Side|side.pt|
-Front_Side|dual.pt|
+|Model name|Model file||
+|:--:|:--:|:--:|
+|Front|front.pt|
+|:--:|:--:|:--:|
+
+|Side|side.pt|
+|:--:|:--:|:--:|
+
+|Front_Side|dual.pt|
+|:--:|:--:|:--:|
+
 
