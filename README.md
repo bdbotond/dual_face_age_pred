@@ -22,34 +22,47 @@ We split the data into training, validation, and testing sets by using 0.6, 0.2,
 |Side|side_model.pt|
 |Front_Side|dual_model.pt|
 
-To use the models make sure the files in this directory strucure:
+### To use the models make sure you intall the packages from `requiments.txt`, and put the files in the directory strucure shoqn below:
 ```bash
-├── base_folder
-   ├── predict_one_image.py
-   ├── predict_image_batch.py
-   ├── predict_from_folder.py
-   ├── Models
-      ├── front_model.pt
-      ├── side_model.pt
-      ├── dual_model.py
-   ├── Images
-      ├── image1.png
-      ├── image2.png
+├── base_folder/
+│   ├── predict_one_image.py
+│   ├── predict_image_batch.py
+│   ├── predict_from_folder.py
+│   ├── Models/
+│   │   ├── front_model.pt
+│   │   ├── side_model.pt
+│   │   ├── dual_model.pt  # Note: This was dual_model.py in your original. Corrected to .pt assuming it's a model file.
+│   ├── Images/
+│   │   ├── image1.png
+│   │   └── image2.png
 
 ```
-To predict one image use the code below
-```
-python3 predict_one_image direction image_path
-```
+### Predict one image
 
-To predict batches of images you can use the code below, put the path of the images into a "path" column, and the code will save it into "age_predict.csv":
+To predict one image use `predict_one_image.py`, it will print out the predicted age.:
+```
+python3 predict_one_image.py direction image_path
+```
+* Replace `<direction>` with the desired model type: front,side, or dual
+
+* Replace `<image_path>` with the path of your image file.
+
+### Predict images from `.csv` file
+To predict batches of images you can use `predict_image_csv.py` , put the path of the images into the ``path`` column:
 
 ```
-python3 predict_image_batch direction csv_file
+python3 predict_image_csv.py direction csv_file
 ```
+* Replace `<direction>` with the desired model type: front,side, or dual
 
-To predict the images in the ./Images folder run the code below:
+* Replace `<csv_file>` with the path of your '.csv' file.
+* 
+* The predictions will be saved into `<csv_file>_predict.csv`:
+
+### Predict images from folder
+To predict the images in the `./Images` folder run predict_from_folder.py, this will predict all the images from the `./Images` folder:
 
 ```
-python3 predict_from_folder direction
+python3 predict_from_folder.py direction
 ```
+* The predictions will be saved into `Images_with_age.csv`, with path and predicted age.
