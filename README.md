@@ -55,3 +55,12 @@ python3 predict_image_csv.py direction csv_file
 * The predictions will be saved into `<csv_file>_predict.csv`:
 
 
+
+## Authors
+
+* **Botond Bárdos Deák** -  [bdbotond@sztaki.hu](mailto:bdbotond@sztaki.hu)
+* **Csaba Kerepesi** -  - [kerepesi@sztaki.hu](mailto:kerepesi@sztaki.hu)
+
+## Contact
+
+For questions or feedback, please contact Botond Bárdos Deák at [bdbotond@sztaki.hu](mailto:bdbotond@sztaki.hu)
