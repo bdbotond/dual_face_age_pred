@@ -24,9 +24,8 @@ We split the data into training, validation, and testing sets by using 0.6, 0.2,
 ```bash
 ├── base_folder/
 │   ├── predict_one_image.py
-│   ├── predict_image_batch.py
-│   ├── predict_from_folder.py
-│   ├── Models/
+│   ├── predict_from_csv.py
+│   ├── models/
 │   │   ├── front_model.pt
 │   │   ├── side_model.pt
 │   │   ├── dual_model.pt  # Note: This was dual_model.py in your original. Corrected to .pt assuming it's a model file.
@@ -46,7 +45,7 @@ python3 predict_one_image.py direction image_path
 * Replace `<image_path>` with the path of your image file.
 
 ### Predict images from `.csv` file
-To predict batches of images you can use `predict_image_csv.py` , put the path of the images into the ``path`` column:
+To predict batches of images you can use `predict_from_csv.py` , put the path of the images into the ``path`` column:
 
 ```
 python3 predict_image_csv.py direction csv_file
@@ -57,10 +56,4 @@ python3 predict_image_csv.py direction csv_file
 * 
 * The predictions will be saved into `<csv_file>_predict.csv`:
 
-### Predict images from folder
-To predict the images in the `./Images` folder run predict_from_folder.py, this will predict all the images from the `./Images` folder:
 
-```
-python3 predict_from_folder.py direction
-```
-* The predictions will be saved into `Images_with_age.csv`, with path and predicted age.
