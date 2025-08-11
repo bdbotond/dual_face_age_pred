@@ -29,10 +29,7 @@ We split the data into training, validation, and testing sets by using 0.6, 0.2,
 │   │   ├── front_model.pt
 │   │   ├── side_model.pt
 │   │   ├── dual_model.pt  # Note: This was dual_model.py in your original. Corrected to .pt assuming it's a model file.
-│   ├── Images/
-│   │   ├── image1.png
-│   │   └── image2.png
-
+│ 
 ```
 ### Predict one image
 
