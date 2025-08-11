@@ -53,7 +53,8 @@ python3 predict_image_csv.py direction csv_file
 * Replace `<direction>` with the desired model type: front,side, or dual
 
 * Replace `<csv_file>` with the path of your '.csv' file.
-* 
+* Add front image paths `<front_path>` column in the '.csv' file.
+* Add side image paths `<side_path>` column in the '.csv' file.
 * The predictions will be saved into `<csv_file>_predict.csv`:
 
 
