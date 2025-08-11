@@ -1,0 +1,8 @@
+albumentations==2.0.8
+numpy==2.3.2
+opencv_python==4.10.0.84
+opencv_python_headless==4.10.0.84
+pandas==2.3.1
+retina_face==0.0.17
+torch==2.4.0
+torchvision==0.19.0
