@@ -58,8 +58,8 @@ python3 predict_image_csv.py direction csv_file
 
 ## Authors
 
-* **Botond Bárdos Deák** -  [bdbotond@sztaki.hu](mailto:bdbotond@sztaki.hu)
-* **Csaba Kerepesi** -  - [kerepesi@sztaki.hu](mailto:kerepesi@sztaki.hu)
+* **Botond Bárdos Deák** :  [bdbotond@sztaki.hu](mailto:bdbotond@sztaki.hu)
+* **Csaba Kerepesi** : [kerepesi@sztaki.hu](mailto:kerepesi@sztaki.hu)
 
 ## Contact
 
