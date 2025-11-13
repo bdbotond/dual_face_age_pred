@@ -3,6 +3,7 @@ import torch
 import torch.nn as nn
 from torchvision import models
 import numpy as np
+
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 from retinaface import RetinaFace
@@ -25,7 +26,7 @@ def img_transform_dual(image_code_f,image_code_s):
     A.PadIfNeeded(p=1.0, min_height=max_side, min_width=max_side, border_mode=0, value=(0,0,0)),
     A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
     A.Resize(224,224),
-    ToTensorV2()
+    A.ToTensorV2()
     ])
 
     front_transformed=transform(image=image_front)["image"]
@@ -45,7 +46,7 @@ def img_transform_dual(image_code_f,image_code_s):
     A.PadIfNeeded(p=1.0, min_height=max_side, min_width=max_side, border_mode=0, value=(0,0,0)),
     A.Normalize(mean=(0.485, 0.456, 0.406), std=(0.229, 0.224, 0.225)),
     A.Resize(224,224),
-    ToTensorV2()
+    A.ToTensorV2()
     ])
 
 
@@ -127,13 +128,17 @@ if __name__ == "__main__":
         image_front_path = sys.argv[2]
         image_side_path = sys.argv[3]
         prediction = predict(direction, image_front_path, image_side_path)
+        print(f"Prediction: {prediction}")
 
-    elif len(sys.argv) != 3:
-        print("Usage: python predict.py <direction> <image_path>")
-        sys.exit(1)
+    elif len(sys.argv) == 3:
+        #sys.exit(1)
     
         direction = sys.argv[1]
         image_path = sys.argv[2]
         
-        prediction = predict(direction, image_path)
-    print(f"Prediction: {prediction}")
+        prediction = predict(direction, image_path,None)
+        print(f"Prediction: {prediction}")
+    else:
+        print("Usage: python predict.py <direction> <image_path>")
+        sys.exit(1)
+
