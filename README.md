@@ -54,7 +54,17 @@ python3 predict_image_csv.py direction csv_file
 * Add side image paths `<side_path>` column in the '.csv' file.
 * The predictions will be saved into `<csv_file>_predict.csv`:
 
-
+# Reproduce the results
+- If you have boundig boxes to the dataset, or your faces has boundung boxes, use the `<train_model_cropped_face.py>`. You can train it from a '.csv' file, with image paths in the column ``path`` and ages in the column ``age``, and bounding box points in ``x1``,``x2``,``x3``,``x4`` columns.
+- To train the model run the following code, with first arument is the `<gpu_id>` and second is the `<data_file_path.csv>` file:
+```
+python3 train_model_cropped_face.py  gpu_id data_file_path.csv
+```
+- If you dont hage bounding box for the faces you can use [Retinaface](https://github.com/serengil/retinaface), to crop the images (means extra GPU usage), for this you can use `<train_model.py>`. You can train it from a '.csv' file, with image paths in the column ``path`` and ages in the column ``age``.
+- - To train the model run the following code, with first arument is the `<gpu_id>` and second is the `<data_file_path.csv>` file:
+```
+python3 train_model.py  gpu_id data_file_path.csv
+```
 
 ## Authors
 
