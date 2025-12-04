@@ -54,6 +54,20 @@ python3 predict_image_csv.py direction csv_file
 * Add side image paths `<side_path>` column in the '.csv' file.
 * The predictions will be saved into `<csv_file>_predict.csv`:
 
+### To plot GRAD-CAM heatpams
+
+#### Command Line Arguments
+
+1. **GPU ID**: The index of the GPU to be used. Example: `--gpu 0` **WARNING: high gpu usage**
+2. **Dataset Path**: The file path to the CSV dataset. Example: `--dataset_path /path/to/dataset.csv`
+3. **Direction**: The direction for inference ('front', 'side', or 'two'). Example: `--direction front`
+
+```bash
+python gradcam_test.py --gpu 0 --dataset_path /path/to/dataset.csv --direction front
+```
+- Then in plot the results in ```gradcam_results_plot.ipynb```
+
+
 # Reproduce the results
 - If you have boundig boxes to the dataset, or your faces has boundung boxes, use the `<train_model_cropped_face.py>`. You can train it from a '.csv' file, with image paths in the column ``path`` and ages in the column ``age``, and bounding box points in ``x1``,``x2``,``x3``,``x4`` columns.
 - To train the model run the following code, with first arument is the `<gpu_id>` and second is the `<data_file_path.csv>` file:
